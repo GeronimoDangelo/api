@@ -2,6 +2,7 @@ package com.study.interview1
 
 import dagger.hilt.android.AndroidEntryPoint
 import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
 
-@AndroidEntryPoint
+@HiltAndroidApp
  class Application : Application()
