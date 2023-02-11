@@ -1,6 +1,6 @@
 package com.study.interview1.data.remote.response
 
-data class LoginDto(
+data class Login(
     val md5: String,
     val password: String,
     val salt: String,

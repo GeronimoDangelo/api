@@ -1,6 +1,6 @@
 package com.study.interview1.data.remote.response
 
-data class InfoDto(
+data class Info(
     val page: Int,
     val results: Int,
     val seed: String,

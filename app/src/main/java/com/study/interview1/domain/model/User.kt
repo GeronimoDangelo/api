@@ -8,4 +8,5 @@ data class User(
     val address: String,
     val phoneNumber: String,
     val password: String,
+    val img: String
 )

@@ -1,16 +1,17 @@
 package com.study.interview1.data.mappers
 
-import com.study.interview1.data.remote.response.ResultDto
+import com.study.interview1.data.remote.response.Result
 import com.study.interview1.domain.model.User
 
-fun ResultDto.toDomain(): User {
+fun Result.toDomain(): User {
     return User(
-        name = "${this.nameDto.first} ${this.nameDto.last}",
+        name = "${this.name.first} ${this.name.last}",
         email = this.email,
-        birthday = this.dobDto.date,
-        age = this.dobDto.age,
-        address = this.locationDto.country,
+        birthday = this.dob.date,
+        age = this.dob.age,
+        address = this.location.country,
         phoneNumber = this.phone,
-        password = this.loginDto.password
+        password = this.login.password,
+        img = this.picture.large
     )
 }

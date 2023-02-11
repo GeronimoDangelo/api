@@ -1,5 +1,6 @@
 package com.study.interview1.data.remote
 
+import android.util.Log
 import com.study.interview1.data.mappers.toDomain
 import com.study.interview1.domain.model.User
 import com.study.interview1.domain.repository.UserRepository
@@ -12,10 +13,11 @@ class UserRepositoryImpl @Inject constructor(
     override suspend fun fetchUser(): Resource<User> {
         return try {
             Resource.Success(
-                data = userApi.fetchUser().resultDtos.first().toDomain()
+                data = userApi.fetchUser().results.first().toDomain()
             )
         } catch (e: Exception) {
-            Resource.Error(e.toString())
+            Log.e("fetch", e.toString())
+            Resource.Error(message = e.toString())
         }
     }
 }

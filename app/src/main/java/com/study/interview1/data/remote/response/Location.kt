@@ -1,11 +1,11 @@
 package com.study.interview1.data.remote.response
 
-data class LocationDto(
+data class Location(
     val city: String,
-    val coordinatesDto: CoordinatesDto,
+    val coordinates: Coordinates,
     val country: String,
     val postcode: Int,
     val state: String,
-    val streetDto: StreetDto,
-    val timezoneDto: TimezoneDto
+    val street: Street,
+    val timezone: Timezone
 )
